@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  box-sizing: border-box;
+}
+
+html{
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 1536px){
+  html{
+    font-size: 18px;
+  }
+}
+
+@media(min-width: 2000px){
+  html{
+    font-size: 20px;
+  }
+}
+
+@keyframes fadeOut{
+  from{
+    opacity: 100%;
+  }
+
+  to{
+    opacity: 0%;
+  }
+}
+
+.fadeOut{
+  animation: fadeOut 1s forwards;
+}
+
+
+@keyframes fadeIn{
+  from{
+    opacity: 0%;
+  }
+
+  to{
+    opacity: 100%;
+  }
+}
+
+.fadeIn{
+  animation: fadeIn 1s forwards;
+}
+
+
+.navLinks a{
+  position: relative;
+  z-index: 2;
+}
+
+.navLinks a::after{
+  content: '';
+  position: absolute;
+  width: 120%;
+  transform: scaleX(0);
+  height: 5px;
+  bottom: 5px;
+  left: -10%;
+  background-color: #4B7B30;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+  z-index: -3;
+}
+
+.navLinks a:hover::after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@keyframes toScreen{
+  from{
+    transform: translateX(-100%);
+  }
+
+  to{
+    transform: translateX(0%);
+  }
+}
+
+.toScreen{
+  animation: toScreen 0.5s;
+}
+
+h1{
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.scania{
+  object-fit: fill;
+}
+
+@media only screen and (max-width: 1700px){
+  .scania{
+    object-fit: cover;
+  }
+}
+
+#indicator{
+  animation: indicator 2s infinite linear;
+}
+
+@keyframes indicator {
+  0%{
+    transform: translateY(5px);
+  }
+
+  50%{
+    transform: translateY(10px);
+  }
+
+  100%{
+    transform: translateY(5px);
+  }
+}
+
+.profesionalism{
+  font-size: 55px;
+}
+
+@media only screen and (min-aspect-ratio: 4/3){
+  .profesionalism{
+    font-size: 9.2vh;
+  }
+}
+
+
+.grainAppear{
+  animation: grainAppear 1s ease-out;
+}
+
+@keyframes grainAppear{
+  0%{
+    transform: translateX(-50%) rotate(-10deg);
+  }
+
+  100%{
+    transform: translateX(0%) rotate(0deg);
+  }
+}
+
+.LineAppear{
+  animation: LineAppear 1s forwards;
+}
+
+@keyframes LineAppear{
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+#servicii{
+  display: grid;
+  grid-template-columns: 36% 1fr;
+}
