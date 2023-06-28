@@ -59,10 +59,16 @@
   </section>
   <section id="servicii" class="relative h-screen w-screen bg-negru">
     <div class="h-full w-full relative overflow-hidden">
-      <img src="./src/images/lan.png" alt="lan" class="object-fill h-full w-full pointer-events-none">
+      <img src="./src/images/lan3.png" alt="lan" class="lan object-fill h-full w-full pointer-events-none absolute">
+      <img src="./src/images/lan2.png" alt="lan" class="lan object-fill h-full w-full pointer-events-none absolute">
+      <img src="./src/images/lan.png" alt="lan" class="lan object-fill h-full w-full pointer-events-none absolute">
+      <div class="text-[90px] absolute text-alb font-bold top-[13.6%] right-[7.5%] font-['Open_Sans'] flex overflow-hidden">/
+        <div id="numbers" class="flex flex-col h-[135px]"><span>1</span><span>2</span><span>3</span><span>1</span></div>
+        <!-- 135 -->
+      </div>
     </div>
     <div>
-      <div class="line bg-[#D9D9D9] h-[1%] w-[27.7%] absolute z-50 top-[10.3vh] hidden xl:block right-[0.9%] origin-right"></div>
+      <div class="line bg-[#D9D9D9] h-[1%] w-[27.7%] absolute z-50 top-[10.3vh] hidden xl:block right-[17px] origin-right"></div>
       <div class="pl-[7.8vw] xl:pt-[15.4vh] pt-[7vh]">
         <h1 class="font-bold text-alb text-[4.6vw] text-justify">Ce servicii noi oferim</h1>
 
@@ -98,5 +104,65 @@
 
     </div>
   </section>
+
+  <section id="vertical" class="w-screen h-screen grid grid-cols-10 relative">
+    <div class="absolute top-1/2 left-1/2 font-bold text-[10rem] text-alb -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">În lucru</div>
+    <div class="h-full w-full bg-black"></div>
+    <div class="h-full w-full bg-yellow-400"></div>
+    <div class="h-full w-full bg-black"></div>
+    <div class="h-full w-full bg-yellow-400"></div>
+    <div class="h-full w-full bg-black"></div>
+    <div class="h-full w-full bg-yellow-400"></div>
+    <div class="h-full w-full bg-black"></div>
+    <div class="h-full w-full bg-yellow-400"></div>
+    <div class="h-full w-full bg-black"></div>
+    <div class="h-full w-full bg-yellow-400"></div>
+  </section>
+
+  <section id="contacte" class="h-screen w-screen">
+    <div class="w-full h-full bg-negru">
+      <h1 class="text-alb font-bold text-[5rem] pl-[7.8vw] pt-[4.8vh] pb-[2.5vh]">Contacte</h1>
+      <div class="bg-verde w-full h-[29.6vh]">
+        <div class="pl-[7.8vw] grid grid-cols-2 h-full py-[5.1vh]">
+          <div class="flex flex-col justify-between">
+            <p class="flex font-bold text-alb font-['Open_Sans'] text-[1.1rem]"><img src="./src/images/telefon.svg" alt="icon" class="mr-[1.5vw]">+373 78 34242</p>
+            <p class="flex font-bold text-alb font-['Open_Sans'] text-[1.1rem]"><img src="./src/images/mail.svg" alt="icon" class="mr-[1.5vw]">bioagroprim@mail.ru</p>
+            <p class="flex font-bold text-alb font-['Open_Sans'] text-[1.1rem]"><img src="./src/images/marker.svg" alt="icon" class="mr-[1.5vw]">mun. Chișinău, str. Scutari 10/4</p>
+            <p class="flex font-bold text-alb font-['Open_Sans'] text-[1.1rem]"><img src="./src/images/office.svg" alt="icon" class="mr-[1.5vw]">SRL "Bioagroprim"</p>
+            <p class="flex font-bold text-alb font-['Open_Sans'] text-[1.1rem]"><img src="./src/images/file.svg" alt="icon" class="mr-[1.5vw]">C/f: 1014600023247</p>
+          </div>
+          <div class="flex flex-col justify-between">
+            <p class="font-bold text-alb font-['Open_Sans'] text-[1.1rem]">TVA 0307812</p>
+            <p class="font-bold text-alb font-['Open_Sans'] text-[1.1rem]">IBAN MD28PR002251176255001498</p>
+            <p class="font-bold text-alb font-['Open_Sans'] text-[1.1rem]">BIC PRCBMD22</p>
+            <p class="font-bold text-alb font-['Open_Sans'] text-[1.1rem]">BC" PROCREDITBANK"SA</p>
+            <p class="font-bold text-alb font-['Open_Sans'] text-[1.1rem]">Punct descărcare: sat.Cruglic rn.Criuleni</p>
+          </div>
+        </div>
+      </div>
+      <div class="pl-[7.8vw] mt-[9.2vh]">
+        <p class="font-['Lato'] font-bold text-[1.3rem] text-alb">Trimite un <span class="text-verde">mesaj</span></p>
+        <div class="mt-[2.7vh] flex flex-col">
+          <div>
+            <input type="text" placeholder="Nume" class="bg-negru border-b-[1px] border-alb w-[14.5vw]">
+            <input type="text" placeholder="Prenume" class="bg-negru border-b-[1px] border-alb w-[14.5vw] ml-[2.6vw]">
+          </div>
+          <div class="mt-[4vh]">
+            <input type="text" placeholder="Cointeresat în" class="bg-negru border-b-[1px] border-alb w-[14.5vw]">
+            <input type="text" placeholder="Număr de Telefon" class="bg-negru border-b-[1px] border-alb w-[14.5vw] ml-[2.6vw]">
+          </div>
+          <textarea class="bg-negru border-b-[1px] border-alb w-[31.89vw] text-alb mt-[2.5vh]" placeholder="Mesaj Suplimentar"></textarea>
+        </div>
+        <button class="text-negru rounded-[10px] bg-galben h-[5.5vh] w-[20.8vw] font-['Open_Sans'] font-bold text-[1.1rem] mt-[4.6vh] mb-[7.4vh]">TRANSMITE</button>
+      </div>
+    </div>
+    <div class="w-full h-full">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2720.126427614464!2d28.867178076829656!3d47.018123328428665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97dcc4fee7867%3A0x69e5f6f798d330b8!2sBioagroprim!5e0!3m2!1sen!2s!4v1687865238315!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <footer>
+
+  </footer>
 </body>
 </html>

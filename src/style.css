@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+*:focus {
+  outline: none;
+}
+
 html{
   margin: 0;
   scroll-behavior: smooth;
@@ -164,4 +168,47 @@ h1{
 #servicii{
   display: grid;
   grid-template-columns: 36% 1fr;
+}
+
+#numbers.active{
+  transition: cubic-bezier(0.215, 0.610, 0.355, 1) .8s;
+}
+
+.lan{
+  transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) 1s;
+}
+
+#contacte{
+  display: grid;
+  grid-template-columns: 1fr 37.8%;
+}
+
+input{
+  color: #F1F1F1;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 6px;
+}
+
+textarea{
+  resize: none;
+}
+
+textarea::placeholder{
+  color: #F1F1F1;
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.88rem;
+}
+
+input:last-child{
+  line-height: normal;
+}
+
+input::placeholder, label{
+  font-weight: 600;
+  font-family: 'Open Sans', sans-serif;
+  color: #F1F1F1;
+  font-size: 0.88rem;
+  
 }

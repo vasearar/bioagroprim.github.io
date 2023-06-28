@@ -92,3 +92,19 @@ const lineObserver = new IntersectionObserver(entries => {
 const docLines = document.querySelectorAll(".line");
 
 docLines.forEach(line => lineObserver.observe(line));
+
+
+const number = document.querySelector("#numbers");
+let ratio = -135;
+
+setInterval(() =>{
+  number.classList.add('active');
+  number.style.transform = `translateY(${ratio}px)`;
+  ratio-= 135;
+  if (ratio < -540){
+    number.classList.remove('active');
+    number.style.transform = `translateY(0px)`;
+    ratio = -135;
+  }
+} ,1500);
+
