@@ -95,18 +95,12 @@ html{
   animation: toScreen 1s;
 }
 
+#greenH1, #greenP, #grnBtn{
+  transition: ease 1s;
+}
+
 h1{
   font-family: 'Cormorant Garamond', serif;
-}
-
-.scania{
-  object-fit: fill;
-}
-
-@media only screen and (max-width: 1700px){
-  .scania{
-    object-fit: cover;
-  }
 }
 
 #indicator{
@@ -115,7 +109,7 @@ h1{
 
 @keyframes indicator {
   0%{
-    transform: translateY(5px);
+    transform: translateY(0px);
   }
 
   50%{
@@ -123,10 +117,11 @@ h1{
   }
 
   100%{
-    transform: translateY(5px);
+    transform: translateY(0px);
   }
 }
 
+/* DE CE ASTA NU LUCREAZA!!!!
 .profesionalism{
   font-size: 55px;
 }
@@ -135,7 +130,7 @@ h1{
   .profesionalism{
     font-size: 9.2vh;
   }
-}
+} */
 
 
 .grainAppear{
@@ -170,12 +165,27 @@ h1{
   grid-template-columns: 36% 1fr;
 }
 
-#numbers.active{
-  transition: cubic-bezier(0.215, 0.610, 0.355, 1) .8s;
+#numbers{
+  transition: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  animation: numbersChange 3s infinite;
 }
 
-.lan{
-  transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) 1s;
+@keyframes numbersChange {
+  0%{
+    transform: translateY(0px);
+  }
+
+  33%{
+    transform: translateY(-135px);
+  }
+
+  67%{
+    transform: translateY(-270px);
+  }
+
+  100%{
+    transform: translateY(-405px);
+  }
 }
 
 #contacte{
@@ -187,7 +197,7 @@ input{
   color: #F1F1F1;
   font-weight: 600;
   font-family: 'Open Sans', sans-serif;
-  line-height: 6px;
+  line-height: 25px;
 }
 
 textarea{
@@ -198,17 +208,18 @@ textarea::placeholder{
   color: #F1F1F1;
   font-weight: 600;
   font-family: 'Open Sans', sans-serif;
-  font-size: 0.88rem;
-}
-
-input:last-child{
-  line-height: normal;
+  font-size: 1.4vh;
 }
 
 input::placeholder, label{
   font-weight: 600;
   font-family: 'Open Sans', sans-serif;
   color: #F1F1F1;
-  font-size: 0.88rem;
-  
+  font-size: 1.4vh;
 }
+
+
+.lan{
+  transition: cubic-bezier(.09,.66,.14,.95) 2s;
+}
+

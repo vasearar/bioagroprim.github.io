@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Prodius Cătălin">
+
+  <!-- <meta name="description" content="?">
+  <meta name="keywords" content="?"> -->
+
   <link rel="stylesheet" href="dist/output.css">
   <link rel="icon" type="image/x-icon" href="src/images/da.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,91 +18,92 @@
   <script src="src/script.js" defer></script>
   <title>Bioagroprim</title>
 </head>
-<body class="overflow-x-hidden">
+<body class="overflow-x-hidden relative">
   <div id="cursorFollow" class="bg-transparent rounded-full border border-galben h-[24px] w-[24px] absolute hidden z-50 pointer-events-none"></div>
   <section id="home" class="h-screen w-screen relative">
     <nav class="pl-[7.8vw] pt-[3.5vh] pr-[7.8vw] relative z-20 flex items-center">
-      <p class="font-black text-alb text-[1.7rem]"><span class="text-verde">Bio</span>agroprim</p>
+      <p class="font-black text-alb text-[1.7rem] cursor-pointer"><span class="text-verde">Bio</span>agroprim</p>
       <div class="navLinks text-alb text-[1.1rem] flex gap-x-9 absolute left-1/2 -translate-x-1/2 font-['Open_Sans']">
-        <a href="#" class="font-extrabold">Acasă</a>
-        <a href="#">Despre Noi</a>
-        <a href="#">Servicii</a>
-        <a href="#">Contacte</a>
+        <a href="#home" class="font-extrabold">Acasă</a>
+        <a href="#AboutUs">Despre Noi</a>
+        <a href="#servicii">Servicii</a>
+        <a href="#contacte">Contacte</a>
       </div>
     </nav>
-    <img class="scania h-full w-full absolute bottom-0 z-10 pointer-events-none" src="./src/images/truck.png">
-    <img class="scania bg h-full w-full absolute bottom-0 opacity-0" src="./src/images/bg1.png">
-    <img class="scania bg h-full w-full absolute bottom-0 opacity-0" src="./src/images/bg2.png">
-    <img class="scania bg h-full w-full absolute bottom-0 opacity-0" src="./src/images/bg3.png">
-    <img class="scania bg h-full w-full absolute bottom-0 opacity-100" src="./src/images/bg4.png">
+    <img class="h-full w-full absolute bottom-0 z-10 pointer-events-none object-fill" src="./src/images/truck.png">
+    <img class="bg h-full w-full absolute bottom-0 opacity-0 object-fill" src="./src/images/bg1.png">
+    <img class="bg h-full w-full absolute bottom-0 opacity-0 object-fill" src="./src/images/bg2.png">
+    <img class="bg h-full w-full absolute bottom-0 opacity-0 object-fill" src="./src/images/bg3.png">
+    <img class="bg h-full w-full absolute bottom-0 opacity-100 object-fill" src="./src/images/bg4.png">
     <div id="greenRectangle" class="bg-verde w-[82.7%] h-[40.4vh] absolute left-0 bottom-[34%] -translate-x-full">
-      <div class="w-full h-full relative">
+      <div class="w-full h-full relative flex items-center pt-[2.3vh] pb-[4.6vh]">
         <div class="pl-[7.8vw] flex flex-col align-middle gap-[2.5vh]">
-          <h1 class="profesionalism text-alb font-black">Profesionalism<br>în logistica agricolă</h1>
-          <p class="text-alb font-['Open_Sans'] font-black w-[35.7vw] text-[2vh]">Partenerul tău de încredere în vânzarea, cumpărarea și procesarea cerealelor.</p>
-          <img src="./src/images/homeGrain.svg" alt="grain" class="absolute left-0 bottom-5 object-cover h-[37.4vh]">
-          <button class="text-negru text-center font-['Open_Sans'] text-[2vh] bg-galben rounded-[10px] z-50 absolute bottom-[-11vh] font-bold w-[20.8vw] h-[6.1vh] cursor-pointer" onclick="redirect()">DESPRE NOI</button>
+          <h1 id="greenH1" class="text-alb text-[7.3vh] xl:text-[8.3vh] font-black -translate-x-[150%]">Profesionalism<br>în logistica agricolă</h1>
+          <p id="greenP" class="text-alb font-['Open_Sans'] font-black w-[35.7vw] text-[2vh] -translate-x-[150%]">Partenerul tău de încredere în vânzarea, cumpărarea și procesarea cerealelor.</p>
+          <img src="./src/images/homeGrain.svg" alt="grain" class="absolute left-0 bottom-5 object-cover h-[37.4vh] pointer-events-none">
+          <button id="grnBtn" class="text-negru text-center font-['Open_Sans'] text-[2vh] bg-galben rounded-[10px] z-50 -translate-x-[150%] absolute bottom-[-11vh] font-bold w-[20.8vw] h-[6.1vh] cursor-pointer" onclick="redirect()">DESPRE NOI</button>
         </div>
       </div>
     </div>
-    <div class="bg-negru w-[140px] h-[70px] absolute rounded-t-full bottom-0 left-1/2 -translate-x-1/2 z-20 flex items-center justify-center cursor-pointer" onclick="redirect()">
-      <img src="./src/images/arrow.svg" alt="arrow" id="indicator">
+    <div class="bg-negru w-[7.29vw] h-[3.64vw] absolute rounded-t-full bottom-0 left-1/2 -translate-x-1/2 z-20 flex items-center justify-center cursor-pointer" onclick="redirect()">
+      <img src="./src/images/arrow.svg" alt="arrow" id="indicator" class="h-[1vw] w-[1.9vw]">
     </div>
   </section>
   <section id="AboutUs" class="h-screen w-screen bg-negru bg-no-repeat bg-contain flex justify-center relative overflow-hidden">
     <div class="line bg-[#D9D9D9] h-[1%] w-[27.7%] absolute z-50 top-[10.3vh] left-0 origin-left"></div>
     <img id="grain" alt="Grain" src="./src/images/GrainVodka.png" class="absolute left-0 -bottom-24 object-cover pointer-events-none translate-x-full">
     <div class="flex flex-col justify-center items-center w-[570px] z-10">
-      <h1 class="font-bold text-[5rem] text-alb text-center">Despre Noi</h1>
-      <p class="text-alb font-normal text-[1.1rem] font-['Open_Sans'] text-justify pt-[5.1vh] pb-[15.4vh]">
+      <h1 class="font-bold text-[3.8rem] xl:text-[5rem] text-alb text-center">Despre Noi</h1>
+      <p class="text-alb font-normal text-[0.88rem] xl:text-[1.1rem] font-['Open_Sans'] text-justify pt-[4.6vh] pb-[13.8vh]">
         Încrederea și satisfacția <span class="font-bold">clienților</span> noștri sunt prioritare pentru noi. Punem un accent deosebit pe <span class="font-bold">calitatea produselor</span> noastre și pe livrarea acestora în termen, într-un mod profesionist și eficient.<br><br>
         Colaborăm strâns cu partenerii noștri de afaceri și <span class="font-bold">ascultăm cu atenție</span> nevoile și feedback-ul clienților, adaptându-ne constant pentru a oferi soluții agricole personalizate și <span class="font-bold">de încredere.</span><br><br>
         Punem un accent deosebit pe calitatea produselor noastre și pe livrarea acestora în termen.
       </p>
-      <button class="font-bold w-[20.8vw] h-[6.1vh] bg-galben rounded-[10px]" onclick="redirect1()">SERVICII</button>
+      <button class="font-bold w-[20.8vw] h-[5.5vh] bg-galben rounded-[10px]" onclick="redirect1()">SERVICII</button>
     </div>
   </section>
-  <section id="servicii" class="relative h-screen w-screen bg-negru">
-    <div class="h-full w-full relative overflow-hidden">
-      <img src="./src/images/lan3.png" alt="lan" class="lan object-fill h-full w-full pointer-events-none absolute">
-      <img src="./src/images/lan2.png" alt="lan" class="lan object-fill h-full w-full pointer-events-none absolute">
-      <img src="./src/images/lan.png" alt="lan" class="lan object-fill h-full w-full pointer-events-none absolute">
-      <div class="text-[90px] absolute text-alb font-bold top-[13.6%] right-[7.5%] font-['Open_Sans'] flex overflow-hidden">/
-        <div id="numbers" class="flex flex-col h-[135px]"><span>1</span><span>2</span><span>3</span><span>1</span></div>
-        <!-- 135 -->
+  <section id="servicii" class="relative h-screen w-screen bg-negru px-[7.8vw]">
+    <div class="h-screen w-full relative py-[9.2vh]">
+      <div class="h-full w-full relative overflow-hidden">
+        <img src="./src/images/lan3.png" alt="lan" class="lan h-full object-cover w-full pointer-events-none top-0 absolute z-20">
+        <img src="./src/images/lan2.png" alt="lan" class="lan h-full object-cover w-full pointer-events-none top-0 absolute z-10">
+        <img src="./src/images/lan.png" alt="lan" class="lan h-full object-cover w-full pointer-events-none top-0 absolute">
+        <div class="text-[90px] absolute text-alb font-bold top-[9.2vh] right-[5.1vh] font-['Open_Sans'] flex z-30 overflow-hidden">/
+          <div id="numbers" class="flex flex-col h-[135px]"><span>1</span><span>2</span><span>3</span><span>1</span></div>
+        </div>
       </div>
     </div>
     <div>
-      <div class="line bg-[#D9D9D9] h-[1%] w-[27.7%] absolute z-50 top-[10.3vh] hidden xl:block right-[17px] origin-right"></div>
-      <div class="pl-[7.8vw] xl:pt-[15.4vh] pt-[7vh]">
+      <div class="line bg-[#D9D9D9] h-[1%] w-[27.7%] absolute z-50 top-[5.5vh] hidden xl:block right-[17px] origin-right"></div>
+      <div class="pl-[7.8vw] pt-[10vh] h-screen">
         <h1 class="font-bold text-alb text-[4.6vw] text-justify">Ce servicii noi oferim</h1>
 
-        <div class="flex relative mt-[5.5vh] xl:mt-[7.7vh] items-center mb-[4vh]">
-          <div class="font-['Open_Sans'] font-bold flex justify-center items-center text-[1.33rem] bg-galben h-[6.6vh] w-[6.6vh] rounded-[10px] mr-[1.3vw]">01</div>
+        <div class="flex relative mt-[7.5vh] items-center mb-[5vh]">
+          <div class="font-['Open_Sans'] font-bold flex justify-center items-center text-negru text-[1.33rem] bg-galben h-[5.8vh] w-[5.8vh] rounded-[10px] mr-[1.3vw]">01</div>
           <div class="text-alb">
-            <h1 class="font-bold text-[2.2rem] xl:text-[2.6rem]">Cumpărare</h1>
-            <p class="text-[1.1rem] font-['Open_Sans'] mt-[1vh]">Achiziționăm grâne direct de la producători agricoli.</p>
+            <h1 class="font-bold text-[4.4vh] xl:text-[4.4vh]">Cumpărare</h1>
+            <p class="text-[1.9vh] xl:text-[1.1rem] font-['Open_Sans'] mt-[0.9vh] whitespace-nowrap">Valorifică producția ta agricolă cu oferte avantajoase.</p>
           </div>
         </div>
-        <div class="flex relative items-center mb-[4vh]">
-          <div class="font-['Open_Sans'] font-bold flex justify-center items-center text-[1.33rem] bg-verde h-[6.6vh] w-[6.6vh] rounded-[10px] mr-[1.3vw]">02</div>
+        <div class="flex relative items-center mb-[5vh]">
+          <div class="font-['Open_Sans'] font-bold flex justify-center items-center text-negru text-[1.33rem] bg-verde h-[5.8vh] w-[5.8vh] rounded-[10px] mr-[1.3vw]">02</div>
           <div class="text-alb">
-            <h1 class="font-bold text-[2.2rem] xl:text-[2.6rem]">Procesare</h1>
-            <p class="text-[1.1rem] font-['Open_Sans'] mt-[1vh]">Transformăm grânele în produse finite de înaltă calitate.</p>
+            <h1 class="font-bold text-[4.4vh] xl:text-[4.4vh]">Procesare</h1>
+            <p class="text-[1.9vh] xl:text-[1.1rem] font-['Open_Sans'] mt-[0.9vh] whitespace-nowrap">Transformăm grânele în produse finite de înaltă calitate.</p>
           </div>
         </div>
-        <div class="flex relative items-center mb-[4vh]">
-          <div class="font-['Open_Sans'] font-bold flex justify-center items-center text-[1.33rem] bg-galben h-[6.6vh] w-[6.6vh] rounded-[10px] mr-[1.3vw]">03</div>
+        <div class="flex relative items-center mb-[5vh]">
+          <div class="font-['Open_Sans'] font-bold flex justify-center items-center text-negru text-[1.33rem] bg-galben h-[5.8vh] w-[5.8vh] rounded-[10px] mr-[1.3vw]">03</div>
           <div class="text-alb">
-            <h1 class="font-bold text-[2.2rem] xl:text-[2.6rem]">Transportare</h1>
-            <p class="text-[1.1rem] font-['Open_Sans'] mt-[1vh]">Asigurăm livrarea sigură și rapidă a granelor agricole.</p>
+            <h1 class="font-bold text-[4.4vh] xl:text-[4.4vh]">Transportare</h1>
+            <p class="text-[1.9vh] xl:text-[1.1rem] font-['Open_Sans'] mt-[0.9vh] whitespace-nowrap">Promitem livrarea sigură și rapidă a cerealelor agricole.</p>
           </div>
         </div>
         <div class="flex relative items-center">
-          <div class="font-['Open_Sans'] font-bold flex justify-center items-center text-[1.33rem] bg-verde h-[6.6vh] w-[6.6vh] rounded-[10px] mr-[1.3vw]">04</div>
+          <div class="font-['Open_Sans'] font-bold flex justify-center items-center text-negru text-[1.33rem] bg-verde h-[5.8vh] w-[5.8vh] rounded-[10px] mr-[1.3vw]">04</div>
           <div class="text-alb">
-            <h1 class="font-bold text-[2.2rem] xl:text-[2.6rem]">Vânzare</h1>
-            <p class="text-[1.1rem] font-['Open_Sans'] mt-[1vh]">Comercializăm granulele procesate către clienții interesați.</p>
+            <h1 class="font-bold text-[4.4vh] xl:text-[4.4vh]">Vânzare</h1>
+            <p class="text-[1.9vh] xl:text-[1.1rem] font-['Open_Sans'] mt-[0.9vh] whitespace-nowrap">Cele mai bune prețuri pentru cerealele dvs.</p>
           </div>
         </div>
       </div>
@@ -105,64 +111,77 @@
     </div>
   </section>
 
-  <section id="vertical" class="w-screen h-screen grid grid-cols-10 relative">
-    <div class="absolute top-1/2 left-1/2 font-bold text-[10rem] text-alb -translate-x-1/2 -translate-y-1/2 whitespace-nowrap">În lucru</div>
-    <div class="h-full w-full bg-black"></div>
-    <div class="h-full w-full bg-yellow-400"></div>
-    <div class="h-full w-full bg-black"></div>
-    <div class="h-full w-full bg-yellow-400"></div>
-    <div class="h-full w-full bg-black"></div>
-    <div class="h-full w-full bg-yellow-400"></div>
-    <div class="h-full w-full bg-black"></div>
-    <div class="h-full w-full bg-yellow-400"></div>
-    <div class="h-full w-full bg-black"></div>
-    <div class="h-full w-full bg-yellow-400"></div>
+  <section id="vertical" class="w-screen h-[406vw] relative bg-gray-700">
+    <div id="hiddenLine" class="h-[1px] w-[1px] sticky top-0 bg-transparent"></div>
+    <div id="boxSelf" class="w-[455vw] h-screen bg-gray-700 sticky top-0">
+      <div>
+        <div class="flex">
+          <span class="font-bold text-[9.2vh] text-[#FFF] opacity-25 font-['Lato']">01</span>
+          <div>
+            <h1 class="text-alb font-bold text-[8.3vh]">Cumpărare</h1>
+            <p class="w-[27.3vw]">Ai recoltat cereale și ești în căutarea unui partener
+               de încredere pentru a le comercializa? Alege Bioagroprim
+                pentru servicii de cumpărare a cerealelor la prețuri
+                 competitive și condiții avantajoase. Indiferent dacă
+                  ai o recoltă mică sau una impresionantă, Bioagroprim
+                   îți garantează o tranzacție corectă și transparentă.</p>
+            <button class="font-bold w-[20.8vw] h-[5.5vh] bg-galben rounded-[10px]">CONTACTEAZĂ-NE</button>
+          </div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+    </div>
   </section>
 
-  <section id="contacte" class="h-screen w-screen">
-    <div class="w-full h-full bg-negru">
-      <h1 class="text-alb font-bold text-[5rem] pl-[7.8vw] pt-[4.8vh] pb-[2.5vh]">Contacte</h1>
-      <div class="bg-verde w-full h-[29.6vh]">
-        <div class="pl-[7.8vw] grid grid-cols-2 h-full py-[5.1vh]">
+  <section id="contacte" class="h-screen w-screen relative">
+    <div class="w-full h-screen bg-negru">
+      <h1 class="text-alb font-bold text-[8.3vh] pl-[7.8vw] pt-[4.8vh] pb-[2.5vh]">Contacte</h1>
+      <div class="bg-verde w-full h-[29.6vh] flex items-center">
+        <div class="pl-[7.8vw] grid grid-cols-2 h-full py-[4.6vh]">
           <div class="flex flex-col justify-between">
-            <p class="flex font-bold text-alb font-['Open_Sans'] text-[1.1rem]"><img src="./src/images/telefon.svg" alt="icon" class="mr-[1.5vw]">+373 78 34242</p>
-            <p class="flex font-bold text-alb font-['Open_Sans'] text-[1.1rem]"><img src="./src/images/mail.svg" alt="icon" class="mr-[1.5vw]">bioagroprim@mail.ru</p>
-            <p class="flex font-bold text-alb font-['Open_Sans'] text-[1.1rem]"><img src="./src/images/marker.svg" alt="icon" class="mr-[1.5vw]">mun. Chișinău, str. Scutari 10/4</p>
-            <p class="flex font-bold text-alb font-['Open_Sans'] text-[1.1rem]"><img src="./src/images/office.svg" alt="icon" class="mr-[1.5vw]">SRL "Bioagroprim"</p>
-            <p class="flex font-bold text-alb font-['Open_Sans'] text-[1.1rem]"><img src="./src/images/file.svg" alt="icon" class="mr-[1.5vw]">C/f: 1014600023247</p>
+            <p class="flex font-bold text-alb font-['Open_Sans'] text-[1.8vh] xl:text-[1.1rem]"><img src="./src/images/telefon.svg" alt="icon" class="mr-[1.5vw]">+373 78 34242</p>
+            <p class="flex font-bold text-alb font-['Open_Sans'] text-[1.8vh] xl:text-[1.1rem]"><img src="./src/images/mail.svg" alt="icon" class="mr-[1.5vw]">bioagroprim@mail.ru</p>
+            <p class="flex font-bold text-alb font-['Open_Sans'] text-[1.8vh] xl:text-[1.1rem]"><img src="./src/images/marker.svg" alt="icon" class="mr-[1.5vw]">mun. Chișinău, str. Scutari 10/4</p>
+            <p class="flex font-bold text-alb font-['Open_Sans'] text-[1.8vh] xl:text-[1.1rem]"><img src="./src/images/office.svg" alt="icon" class="mr-[1.5vw]">SRL "Bioagroprim"</p>
+            <p class="flex font-bold text-alb font-['Open_Sans'] text-[1.8vh] xl:text-[1.1rem]"><img src="./src/images/file.svg" alt="icon" class="mr-[1.5vw]">C/f: 1014600023247</p>
           </div>
           <div class="flex flex-col justify-between">
-            <p class="font-bold text-alb font-['Open_Sans'] text-[1.1rem]">TVA 0307812</p>
-            <p class="font-bold text-alb font-['Open_Sans'] text-[1.1rem]">IBAN MD28PR002251176255001498</p>
-            <p class="font-bold text-alb font-['Open_Sans'] text-[1.1rem]">BIC PRCBMD22</p>
-            <p class="font-bold text-alb font-['Open_Sans'] text-[1.1rem]">BC" PROCREDITBANK"SA</p>
-            <p class="font-bold text-alb font-['Open_Sans'] text-[1.1rem]">Punct descărcare: sat.Cruglic rn.Criuleni</p>
+            <p class="font-bold text-alb font-['Open_Sans'] text-[1.8vh] xl:text-[1.1rem]">TVA 0307812</p>
+            <p class="font-bold text-alb font-['Open_Sans'] text-[1.8vh] xl:text-[1.1rem]">IBAN MD28PR002251176255001498</p>
+            <p class="font-bold text-alb font-['Open_Sans'] text-[1.8vh] xl:text-[1.1rem]">BIC PRCBMD22</p>
+            <p class="font-bold text-alb font-['Open_Sans'] text-[1.8vh] xl:text-[1.1rem]">BC" PROCREDITBANK"SA</p>
+            <p class="font-bold text-alb font-['Open_Sans'] text-[1.8vh] xl:text-[1.1rem]">Punct descărcare: sat.Cruglic rn.Criuleni</p>
           </div>
         </div>
       </div>
-      <div class="pl-[7.8vw] mt-[9.2vh]">
-        <p class="font-['Lato'] font-bold text-[1.3rem] text-alb">Trimite un <span class="text-verde">mesaj</span></p>
+      <div class="pl-[7.8vw] mt-[4.6vh] xl:mt-[9.2vh]">
+        <p class="font-['Lato'] font-bold text-[2.2vh] text-alb">Transmite un <span class="text-verde">mesaj</span></p>
         <div class="mt-[2.7vh] flex flex-col">
           <div>
-            <input type="text" placeholder="Nume" class="bg-negru border-b-[1px] border-alb w-[14.5vw]">
-            <input type="text" placeholder="Prenume" class="bg-negru border-b-[1px] border-alb w-[14.5vw] ml-[2.6vw]">
+            <input type="text" placeholder="Nume" class="bg-negru border-b-[1px] border-alb w-[14.5vw] text-[1.4vh]" required>
+            <input type="text" placeholder="Prenume" class="bg-negru border-b-[1px] border-alb w-[14.5vw] ml-[2.6vw] text-[1.4vh]" required>
           </div>
           <div class="mt-[4vh]">
-            <input type="text" placeholder="Cointeresat în" class="bg-negru border-b-[1px] border-alb w-[14.5vw]">
-            <input type="text" placeholder="Număr de Telefon" class="bg-negru border-b-[1px] border-alb w-[14.5vw] ml-[2.6vw]">
+            <input type="text" placeholder="Cointeresat în" class="bg-negru border-b-[1px] border-alb w-[14.5vw] text-[1.4vh]" required>
+            <input type="text" placeholder="Număr de Telefon" class="bg-negru border-b-[1px] border-alb w-[14.5vw] ml-[2.6vw] text-[1.4vh]" required>
           </div>
           <textarea class="bg-negru border-b-[1px] border-alb w-[31.89vw] text-alb mt-[2.5vh]" placeholder="Mesaj Suplimentar"></textarea>
         </div>
-        <button class="text-negru rounded-[10px] bg-galben h-[5.5vh] w-[20.8vw] font-['Open_Sans'] font-bold text-[1.1rem] mt-[4.6vh] mb-[7.4vh]">TRANSMITE</button>
+        <button class="text-negru rounded-[10px] bg-galben h-[5.5vh] w-[20.8vw] font-['Open_Sans'] font-bold text-[1.8vh] mt-[4.6vh]">TRANSMITE</button>
       </div>
     </div>
-    <div class="w-full h-full">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2720.126427614464!2d28.867178076829656!3d47.018123328428665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97dcc4fee7867%3A0x69e5f6f798d330b8!2sBioagroprim!5e0!3m2!1sen!2s!4v1687865238315!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="w-full h-screen">
+      <iframe id="frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2720.126427614464!2d28.867178076829656!3d47.018123328428665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97dcc4fee7867%3A0x69e5f6f798d330b8!2sBioagroprim!5e0!3m2!1sen!2s!4v1687865238315!5m2!1sen!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
   </section>
 
-  <footer>
-
+  <footer class="bg-[#1B1B1B] h-[18.5vh] w-screen px-7.8vw relative">
+    <h2 class="font-['Lato'] font-black text-[#8D8D8D] text-[3.3vw] absolute left-[7.8vw] top-1/2 -translate-y-1/2">Bioagroprim</h2>
+    <div class="flex justify-center items-center flex-col gap-[2.3vh] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+      <p class="font-['Montserrat'] font-medium text-[#8D8D8D] text-[0.88rem]">Copyright &copy; 2023 Bioagroprim All rights reserved</p>
+      <p class="font-['Montserrat'] font-medium text-[#8D8D8D] text-[0.88rem] flex">Powered by Modern Vision <img alt="modvis" class="ml-[5px]" src="./src/images/modvis.svg"></p>
+    </div>
   </footer>
 </body>
 </html>
