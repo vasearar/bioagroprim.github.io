@@ -306,6 +306,10 @@ label {
   #cursorFollow.activeCurs {
     background-color: transparent;
   }
+
+  #cursorFollowMini{
+    background-color: transparent;
+  }
 }
 
 .apareJos,
@@ -464,4 +468,14 @@ input[type="textarea"] {
   #vertical {
     height: 500vh;
   }
+}
+
+.forScale {
+  transition: all ease 0.3s;
+}
+.forScale:hover {
+  transform: scale(1.2);
+}
+.forScale.dim {
+  filter: brightness(0.5);
 }

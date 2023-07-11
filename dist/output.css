@@ -792,6 +792,10 @@ video {
   margin-top: 0px;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
 .mt-\[0\.7vh\] {
   margin-top: 0.7vh;
 }
@@ -826,18 +830,6 @@ video {
 
 .mt-\[9\.1vh\] {
   margin-top: 9.1vh;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
-.mt-4 {
-  margin-top: 1rem;
-}
-
-.mt-5 {
-  margin-top: 1.25rem;
 }
 
 .block {
@@ -2010,6 +2002,10 @@ label {
   #cursorFollow.activeCurs {
     background-color: transparent;
   }
+
+  #cursorFollowMini{
+    background-color: transparent;
+  }
 }
 
 .apareJos,
@@ -2167,6 +2163,18 @@ input[type="textarea"] {
   #vertical {
     height: 500vh;
   }
+}
+
+.forScale {
+  transition: all ease 0.3s;
+}
+
+.forScale:hover {
+  transform: scale(1.2);
+}
+
+.forScale.dim {
+  filter: brightness(0.5);
 }
 
 @media (min-width: 321px) {

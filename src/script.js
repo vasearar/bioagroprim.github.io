@@ -581,3 +581,28 @@ document.querySelectorAll(".trgImg").forEach(images => {
   images.addEventListener('mousemove', animateImage);
   images.addEventListener('mouseleave', animateImage);
 });
+
+
+// Pentru ca serviciile să facă zoom-------------------->
+
+const divs = document.querySelectorAll('.forScale');
+
+divs.forEach(div => {
+  div.addEventListener('mouseover', () => {
+    div.classList.remove('dim');
+    divs.forEach(otherDiv => {
+      if (otherDiv !== div) {
+        otherDiv.classList.add('dim');
+      }
+    });
+  });
+
+  div.addEventListener('mouseout', () => {
+    div.classList.remove('dim');
+    divs.forEach(otherDiv => {
+      if (otherDiv !== div) {
+        otherDiv.classList.remove('dim');
+      }
+    });
+  });
+});
